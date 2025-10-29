@@ -9,29 +9,29 @@ class SanPhamController extends Controller
 {
     public function index()
     {
-        // ✅ Hiển thị danh sách sản phẩm
+        
         $products = SanPham::all();
         return view('admin.add_product', compact('products'));
     }
 
     public function create()
     {
-        // ✅ Khi bấm "Thêm mới" vẫn hiển thị danh sách
+       
         $products = SanPham::all();
         return view('admin.add_product', compact('products'));
     }
 
     public function store(Request $request)
     {
-        // 1. KIỂM TRA TÊN SẢN PHẨM ĐÃ TỒN TẠI CHƯA
+       
         $existingProduct = SanPham::where('TenSP', $request->TenSP)->first();
 
         if ($existingProduct) {
-            // Nếu sản phẩm đã tồn tại, chuyển hướng trở lại với thông báo lỗi
+           
             return redirect()->back()->with('error', 'Lỗi: Tên sản phẩm đã tồn tại trong hệ thống. Vui lòng chọn tên khác!');
         }
         
-        // 2. NẾU CHƯA TỒN TẠI, TIẾN HÀNH THÊM MỚI
+        
         $product = new SanPham();
         $product->TenSP = $request->TenSP;
         $product->Gia = $request->Gia;

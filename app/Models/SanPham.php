@@ -11,7 +11,7 @@ class SanPham extends Model
 
     protected $table = 'sanpham';
     protected $primaryKey = 'MaSP';
-    public $timestamps = false; // Vì bảng không có created_at, updated_at
+    public $timestamps = false; 
 
     protected $fillable = [
         'TenSP',
