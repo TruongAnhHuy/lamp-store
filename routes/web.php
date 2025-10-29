@@ -43,7 +43,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::view('/panels', 'admin.panels-wells')->name('admin.panels');
     Route::view('/tables', 'admin.tables')->name('admin.tables');
     Route::view('/typography', 'admin.typography')->name('admin.typography');
-    Route::view('/add', 'admin.add_product')->name('admin.add');
+    Route::view('/sanpham', 'admin.add_product')->name('admin.add');
 
     // Quản lý sản phẩm
     Route::get('/sanpham', [SanPhamController::class, 'index'])->name('sanpham.index');

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Trang quản trị - SB Admin 2</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('admin-template/bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -22,7 +22,7 @@
     <!-- Custom Fonts -->
     <link href="{{ asset('admin-template/bower_components/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -40,29 +40,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ route('admin.index') }}">SB Admin v2.0</a>
+                <a class="navbar-brand" href="{{ route('admin.index') }}">Trang quản trị</a>
             </div>
 
+            <!-- Top right -->
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Hồ sơ cá nhân</a></li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Cài đặt</a></li>
                         <li class="divider"></li>
-                        <li><a href="{{ route('login') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                        <li><a href="{{ route('login') }}"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a></li>
                     </ul>
                 </li>
             </ul>
 
+            <!-- Sidebar -->
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
                             <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm...">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-search"></i>
@@ -72,6 +74,7 @@
                         </li>
 
                         <li><a href="{{ route('admin.index') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -79,8 +82,10 @@
                                 <li><a href="{{ route('admin.morris') }}">Morris.js Charts</a></li>
                             </ul>
                         </li>
+
                         <li><a href="{{ route('admin.tables') }}"><i class="fa fa-table fa-fw"></i> Tables</a></li>
                         <li><a href="{{ route('admin.forms') }}"><i class="fa fa-edit fa-fw"></i> Forms</a></li>
+
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -92,7 +97,10 @@
                                 <li><a href="{{ route('admin.grid') }}">Grid</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ route('admin.add') }}">Add Product</a></li>
+
+                        <!-- ✅ Sửa chỗ lỗi ở đây -->
+                        <li><a href="{{ route('sanpham.index') }}"><i class="fa fa-plus-circle fa-fw"></i> Thêm sản phẩm</a></li>
+
                         <li>
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -109,6 +117,7 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li class="active">
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
